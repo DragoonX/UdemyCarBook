@@ -1,9 +1,4 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using UdemyCarBook.Application.Interfaces;
 using UdemyCarBook.Persistence.Context;
 
@@ -36,7 +31,7 @@ namespace UdemyCarBook.Persistence.Repositories
 
         public Task RemoveAsync(T entity)
         {
-           _context.Set<T>().Remove(entity);
+            _context.Set<T>().Remove(entity);
             return _context.SaveChangesAsync();
         }
 
